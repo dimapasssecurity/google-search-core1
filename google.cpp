@@ -1,4 +1,6 @@
 #include <iostream>
+#include <clocale> // для setlocale
+#include <cstdlib> // для system
 
 void renderImageAnswer() {
     std::cout << "[GOOGLE IMAGES]: Наглядная графическая схема процесса:" << std::endl;
@@ -6,6 +8,12 @@ void renderImageAnswer() {
 }
 
 int main() {
+    // Устанавливаем кодировку консоли в UTF-8 (для Windows)
+    system("chcp 65001 > nul");
+    
+    // Устанавливаем русскую локаль
+    std::setlocale(LC_ALL, "Russian");
+
     renderImageAnswer();
 
     std::cout << " " << std::endl;
