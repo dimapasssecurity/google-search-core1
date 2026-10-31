@@ -1,6 +1,5 @@
 #include <iostream>
 #include <string>
-#include <clocale> // для setlocale
 #include <cstdlib> // для system
 
 void renderTextAnswer() {
@@ -16,8 +15,6 @@ int main() {
     // Устанавливаем кодировку консоли в UTF-8 (для Windows)
     system("chcp 65001 > nul");
     
-    // Устанавливаем русскую локаль
-    std::setlocale(LC_ALL, "Russian");
 
     std::string query = "как выйти из vim в 2026 году";
     std::cout << "================ GOOGLE SEARCH CORE ================" << std::endl;
