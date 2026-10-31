@@ -1,6 +1,11 @@
 #include <iostream>
+#include <string>
 #include <clocale> // для setlocale
 #include <cstdlib> // для system
+
+void renderTextAnswer() {
+    std::cout << "[РЕЗУЛЬТАТ ПОИСКА]: Нажмите :q! для завершения сессии." << std::endl;
+}
 
 void renderImageAnswer() {
     std::cout << "[GOOGLE IMAGES]: Наглядная графическая схема процесса:" << std::endl;
@@ -14,6 +19,11 @@ int main() {
     // Устанавливаем русскую локаль
     std::setlocale(LC_ALL, "Russian");
 
+    std::string query = "как выйти из vim в 2026 году";
+    std::cout << "================ GOOGLE SEARCH CORE ================" << std::endl;
+    std::cout << "Запрос: \"" << query << "\"" << std::endl;
+    std::cout << "----------------------------------------------------" << std::endl;
+    renderTextAnswer();
     renderImageAnswer();
 
     std::cout << " " << std::endl;
